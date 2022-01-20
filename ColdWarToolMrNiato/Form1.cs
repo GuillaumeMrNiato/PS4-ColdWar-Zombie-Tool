@@ -107,6 +107,7 @@ namespace ColdWarToolMrNiato
 
         private void button6_Click_1(object sender, EventArgs e)
         {
+            //Test
             PS4.WriteMemory(pid, 0xB13DFF4, BitConverter.GetBytes((int)numericUpDown3.Value));
             PS4.Notify(222, "Money set to " + numericUpDown3.Value.ToString() + ", buy something to make it stick !");
         }
