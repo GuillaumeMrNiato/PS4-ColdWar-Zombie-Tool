@@ -16,7 +16,6 @@ namespace ColdWarToolMrNiato
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
         }
@@ -49,6 +48,7 @@ namespace ColdWarToolMrNiato
                         pid = process.pid;
                         PS4.Notify(222, "Process Attached");
                         PS4.Notify(222, "COD Cold War RTM Tool for Zombie by MrNiato | Compatible with update 1.27");
+                        PS4.Notify(222, "Twitter : @ImMrNiato");
                         toolStripLabel5.Text = "Attached";
                         toolStripLabel5.ForeColor = Color.Green;
                         groupBox3.Enabled = true;
@@ -159,6 +159,346 @@ namespace ColdWarToolMrNiato
                 PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x02 });
                 PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
             }
+            if (comboBox1.SelectedIndex == 2)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x03 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 3)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x04 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 4)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x05 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 5)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x06 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 6)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x07 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 7)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x08 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 8)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x09 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 9)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x0A });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 10)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x0D });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 11)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x0E });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 12)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x0D });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 13)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x10 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 14)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x11 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 15)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x12 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 16)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x13 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 17)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x14 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 18)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x15 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 19)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x18 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 20)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x1A });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 21)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x1B });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 22)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x1E });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 23)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x20 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 24)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x23 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 25)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x25 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 26)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x26 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 27)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x29 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 28)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x2B });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 29)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x2C });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 30)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x2D });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 31)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x2E });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 32)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x2F });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 33)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x31 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 34)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x32 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 35)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x34 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 36)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x35 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 37)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x36 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 38)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x37 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 39)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x38 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 40)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x39 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 41)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x3A });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 42)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x3C });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 43)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x3E });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 44)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x3F });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 45)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x40 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 46)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x42 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 47)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x43 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 48)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x44 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 49)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x45 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 50)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x46 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 51)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x47 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 52)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x48 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 53)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x49 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 54)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x4A });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 55)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x4B });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 56)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x4C });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 57)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x4D });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 58)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x4E });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 59)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x51 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 60)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x52 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 61)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x53 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 62)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x56 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 63)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x58 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 64)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x59 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 65)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x5A });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 66)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x5B });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 67)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x5D });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 68)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x61 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 69)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x62 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
@@ -195,12 +535,14 @@ namespace ColdWarToolMrNiato
 
         private void button10_Click(object sender, EventArgs e)
         {
+            PS4.Notify(222, "PS4 will disconnect...");
             PS4.Disconnect();
             MessageBox.Show("PS4 Disconnected !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
+            PS4.Notify(222, "PS4 will reboot...");
             PS4.Reboot();
             MessageBox.Show("PS4 will reboot now...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

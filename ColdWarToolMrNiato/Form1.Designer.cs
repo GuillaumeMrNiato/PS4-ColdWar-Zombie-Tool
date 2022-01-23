@@ -476,7 +476,7 @@
             "DEFERLEMENT DU CRBS",
             "M60",
             "AVION DASSAUT",
-            "AVION DASSAUT",
+            "AVION DASSAUT 2",
             "RAID AERIEN",
             "HELICOPTERE DATTAQUE"});
             this.comboBox1.Location = new System.Drawing.Point(138, 130);
