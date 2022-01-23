@@ -30,9 +30,6 @@ namespace ColdWarToolMrNiato
                 toolStripLabel2.Text = "Connected";
                 toolStripLabel2.ForeColor = Color.Green;
                 PS4.Notify(222, "PS4 Connected");
-                MessageBox.Show("console debug version " + PS4.GetConsoleDebugVersion());
-                MessageBox.Show("console library version " + PS4.GetLibraryDebugVersion());
-                PS4DBG.FindPlayStation();
                 MessageBox.Show("PS4 Connected", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -56,7 +53,6 @@ namespace ColdWarToolMrNiato
                         toolStripLabel5.ForeColor = Color.Green;
                         groupBox3.Enabled = true;
                         groupBox4.Enabled = true;
-
                         MessageBox.Show("Process Attached", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
@@ -160,7 +156,7 @@ namespace ColdWarToolMrNiato
             }
             if (comboBox1.SelectedIndex == 1)
             {
-                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x01 });
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x02 });
                 PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
             }
         }
@@ -184,12 +180,6 @@ namespace ColdWarToolMrNiato
             PS4.WriteMemory(pid, 0xB13E330, textBox3.Text);
             PS4.Notify(222, "Name changed to : " + textBox3.Text);
         }
-
-        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
-        {
-            PS4.WriteMemory(pid, 0xB138380, BitConverter.GetBytes((int)numericUpDown4.Value));
-        }
-
         private void godmode_Tick(object sender, EventArgs e)
         {
             PS4.WriteMemory(pid, 0xAA23E30, new byte[] { 0xFF, 0xFF, 0xFF });
@@ -203,15 +193,6 @@ namespace ColdWarToolMrNiato
             PS4.WriteMemory(pid, 0xB139648, new byte[] { 0xFF, 0xFF, 0xFF });
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void button10_Click(object sender, EventArgs e)
         {
             PS4.Disconnect();
@@ -221,7 +202,6 @@ namespace ColdWarToolMrNiato
         private void button11_Click(object sender, EventArgs e)
         {
             PS4.Reboot();
-    
             MessageBox.Show("PS4 will reboot now...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
