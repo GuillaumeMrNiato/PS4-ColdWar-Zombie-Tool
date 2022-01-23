@@ -48,8 +48,11 @@ namespace ColdWarToolMrNiato
                     {
                         pid = process.pid;
                         PS4.Notify(222, "Process Attached");
+                        PS4.Notify(222, "COD Cold War RTM Tool for Zombie by MrNiato | Compatible with update 1.27");
                         toolStripLabel5.Text = "Attached";
                         toolStripLabel5.ForeColor = Color.Green;
+                        groupBox3.Enabled = true;
+                        groupBox4.Enabled = true;
                         MessageBox.Show("Process Attached", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
@@ -116,11 +119,12 @@ namespace ColdWarToolMrNiato
         {
             if (checkBox2.Checked)
             {
-                PS4.WriteMemory(pid, 0xAA23E30, new byte[] { 0xFF, 0xFF, 0xFF });
+                godmode.Start();
                 PS4.Notify(222, "God Mode : ON");
             }
             else
             {
+                godmode.Stop();
                 PS4.WriteMemory(pid, 0xAA23E30, new byte[] { 0x0A, 0x00, 0x00 });
                 PS4.Notify(222, "God Mode : OFF");
             }
@@ -130,14 +134,12 @@ namespace ColdWarToolMrNiato
         {
             if (checkBox3.Checked == true)
             {
-                PS4.WriteMemory(pid, 0xB1396B0, new byte[] { 0xFF, 0xFF, 0xFF });
-                PS4.WriteMemory(pid, 0xB139640, new byte[] { 0xFF, 0xFF, 0xFF });
-                PS4.WriteMemory(pid, 0xB1396B4, new byte[] { 0xFF, 0xFF, 0xFF });
-                PS4.WriteMemory(pid, 0xB139648, new byte[] { 0xFF, 0xFF, 0xFF });
+                ammo.Start();
                 PS4.Notify(222, "Unlimited Ammo : ON");
             }
             else
             {
+                ammo.Stop();
                 PS4.WriteMemory(pid, 0xB1396B0, new byte[] { 0x00, 0x00, 0x00, 0x00 });
                 PS4.WriteMemory(pid, 0xB139640, new byte[] { 0x00, 0x00, 0x00, 0x00 });
                 PS4.WriteMemory(pid, 0xB1396B4, new byte[] { 0x00, 0x00, 0x00, 0x00 });
@@ -149,6 +151,11 @@ namespace ColdWarToolMrNiato
         private void button9_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
+            {
+                PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x01 });
+                PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
+            }
+            if (comboBox1.SelectedIndex == 1)
             {
                 PS4.WriteMemory(pid, 0xB138380, new byte[] { 0x01 });
                 PS4.Notify(222, "Weapon Changed to : " + comboBox1.Text);
@@ -182,6 +189,19 @@ namespace ColdWarToolMrNiato
             //94 ""
             //93 ""
             //97 Raid Aerien
+        }
+
+        private void godmode_Tick(object sender, EventArgs e)
+        {
+            PS4.WriteMemory(pid, 0xAA23E30, new byte[] { 0xFF, 0xFF, 0xFF });
+        }
+
+        private void ammo_Tick(object sender, EventArgs e)
+        {
+            PS4.WriteMemory(pid, 0xB1396B0, new byte[] { 0xFF, 0xFF, 0xFF });
+            PS4.WriteMemory(pid, 0xB139640, new byte[] { 0xFF, 0xFF, 0xFF });
+            PS4.WriteMemory(pid, 0xB1396B4, new byte[] { 0xFF, 0xFF, 0xFF });
+            PS4.WriteMemory(pid, 0xB139648, new byte[] { 0xFF, 0xFF, 0xFF });
         }
     }
 }

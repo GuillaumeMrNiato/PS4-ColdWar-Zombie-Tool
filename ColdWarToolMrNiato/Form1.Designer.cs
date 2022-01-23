@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
@@ -72,6 +73,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.godmode = new System.Windows.Forms.Timer(this.components);
+            this.ammo = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -332,6 +335,7 @@
             this.groupBox4.Controls.Add(this.checkBox3);
             this.groupBox4.Controls.Add(this.checkBox4);
             this.groupBox4.Controls.Add(this.checkBox2);
+            this.groupBox4.Enabled = false;
             this.groupBox4.Location = new System.Drawing.Point(103, 15);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(586, 232);
@@ -359,7 +363,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 89);
+            this.label7.Location = new System.Drawing.Point(18, 89);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 30);
             this.label7.TabIndex = 16;
@@ -368,7 +372,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 133);
+            this.label6.Location = new System.Drawing.Point(18, 133);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 30);
             this.label6.TabIndex = 15;
@@ -398,7 +402,75 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Default"});
+            "Default",
+            "Rayon du CRBS",
+            "CRBS",
+            "CARV.2",
+            "GRAV",
+            "STONER 63",
+            "Pelle a tranche",
+            "M82",
+            "AK-47",
+            "410 IRONHIDE",
+            "RAVAGEUR CRYSALAX",
+            "Chausseur d\'ombre R1",
+            "AMP 63",
+            "M79",
+            "Machette",
+            "RPG-7",
+            "KRIG-6",
+            "OTS-9",
+            "Bullfrog",
+            "Marshall",
+            "M1911",
+            "KSP 45",
+            "Magum",
+            "faucille et marteau",
+            "CIGMA 2",
+            "SAI",
+            "COUTEAU BALLISTIQUE",
+            "ONE DE CHOC ELECTROMAGNETIQUE",
+            "MASSE",
+            "DIAMANTI",
+            "K31 SUISSE",
+            "FFAR 1",
+            "PELLIGTON 703",
+            "FAR",
+            "DMR 14",
+            "TYPE 63",
+            "HAUER 77",
+            "C58",
+            "AUG",
+            "M16",
+            "RAIK 84",
+            "MP5",
+            "PISTOLET A CLOU",
+            "LC10",
+            "AK74U",
+            "MAC10",
+            "RPD",
+            "EM2",
+            "HACHE",
+            "LW3",
+            "CANNE",
+            "PPSH",
+            "GROZA",
+            "QBZ83",
+            "ZRG20MM",
+            "SA12",
+            "MG82",
+            "XM4",
+            "LAPA",
+            "TEC9",
+            "LASER",
+            "MILANO",
+            "BALAYEUSE",
+            "DEFERLEMENT DU CRBS",
+            "M60",
+            "AVION DASSAUT",
+            "AVION DASSAUT",
+            "RAID AERIEN",
+            "HELICOPTERE DATTAQUE"});
             this.comboBox1.Location = new System.Drawing.Point(138, 130);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(266, 38);
@@ -419,7 +491,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 176);
+            this.label5.Location = new System.Drawing.Point(18, 176);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 30);
             this.label5.TabIndex = 8;
@@ -428,7 +500,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(174, 34);
+            this.checkBox3.Location = new System.Drawing.Point(171, 35);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(196, 34);
             this.checkBox3.TabIndex = 12;
@@ -439,7 +511,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(376, 34);
+            this.checkBox4.Location = new System.Drawing.Point(399, 35);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(187, 34);
             this.checkBox4.TabIndex = 13;
@@ -450,7 +522,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(31, 34);
+            this.checkBox2.Location = new System.Drawing.Point(18, 34);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(137, 34);
             this.checkBox2.TabIndex = 11;
@@ -465,6 +537,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.numericUpDown1);
+            this.groupBox3.Enabled = false;
             this.groupBox3.Location = new System.Drawing.Point(103, 253);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(586, 169);
@@ -527,6 +600,16 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // godmode
+            // 
+            this.godmode.Interval = 700;
+            this.godmode.Tick += new System.EventHandler(this.godmode_Tick);
+            // 
+            // ammo
+            // 
+            this.ammo.Interval = 700;
+            this.ammo.Tick += new System.EventHandler(this.ammo_Tick);
             // 
             // Form1
             // 
@@ -606,5 +689,7 @@
         private TextBox textBox3;
         private Label label7;
         private NumericUpDown numericUpDown4;
+        private System.Windows.Forms.Timer godmode;
+        private System.Windows.Forms.Timer ammo;
     }
 }
