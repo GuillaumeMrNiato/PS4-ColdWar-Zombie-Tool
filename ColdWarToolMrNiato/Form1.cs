@@ -30,6 +30,9 @@ namespace ColdWarToolMrNiato
                 toolStripLabel2.Text = "Connected";
                 toolStripLabel2.ForeColor = Color.Green;
                 PS4.Notify(222, "PS4 Connected");
+                MessageBox.Show("console debug version " + PS4.GetConsoleDebugVersion());
+                MessageBox.Show("console library version " + PS4.GetLibraryDebugVersion());
+                PS4DBG.FindPlayStation();
                 MessageBox.Show("PS4 Connected", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -53,6 +56,7 @@ namespace ColdWarToolMrNiato
                         toolStripLabel5.ForeColor = Color.Green;
                         groupBox3.Enabled = true;
                         groupBox4.Enabled = true;
+
                         MessageBox.Show("Process Attached", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
@@ -110,7 +114,6 @@ namespace ColdWarToolMrNiato
 
         private void button6_Click_1(object sender, EventArgs e)
         {
-            //Test
             PS4.WriteMemory(pid, 0xB13DFF4, BitConverter.GetBytes((int)numericUpDown3.Value));
             PS4.Notify(222, "Money set to " + numericUpDown3.Value.ToString() + ", buy something to make it stick !");
         }
@@ -185,10 +188,6 @@ namespace ColdWarToolMrNiato
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
             PS4.WriteMemory(pid, 0xB138380, BitConverter.GetBytes((int)numericUpDown4.Value));
-            //91 Avion d'assault
-            //94 ""
-            //93 ""
-            //97 Raid Aerien
         }
 
         private void godmode_Tick(object sender, EventArgs e)
@@ -202,6 +201,28 @@ namespace ColdWarToolMrNiato
             PS4.WriteMemory(pid, 0xB139640, new byte[] { 0xFF, 0xFF, 0xFF });
             PS4.WriteMemory(pid, 0xB1396B4, new byte[] { 0xFF, 0xFF, 0xFF });
             PS4.WriteMemory(pid, 0xB139648, new byte[] { 0xFF, 0xFF, 0xFF });
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            PS4.Disconnect();
+            MessageBox.Show("PS4 Disconnected !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            PS4.Reboot();
+    
+            MessageBox.Show("PS4 will reboot now...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

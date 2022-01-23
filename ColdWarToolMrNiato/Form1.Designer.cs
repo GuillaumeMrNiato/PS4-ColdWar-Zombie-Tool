@@ -41,6 +41,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -182,15 +184,38 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button11);
+            this.groupBox2.Controls.Add(this.button10);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Enabled = false;
             this.groupBox2.Location = new System.Drawing.Point(173, 239);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(436, 137);
+            this.groupBox2.Size = new System.Drawing.Size(436, 183);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Connect // Attach";
+            this.groupBox2.Text = "Manage the PS4";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(228, 126);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(202, 40);
+            this.button11.TabIndex = 5;
+            this.button11.Text = "Reboot PS4";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(12, 126);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(202, 40);
+            this.button10.TabIndex = 4;
+            this.button10.Text = "Disconnect PS4";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button3
             // 
@@ -691,5 +716,7 @@
         private NumericUpDown numericUpDown4;
         private System.Windows.Forms.Timer godmode;
         private System.Windows.Forms.Timer ammo;
+        private Button button10;
+        private Button button11;
     }
 }
