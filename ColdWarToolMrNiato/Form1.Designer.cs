@@ -154,9 +154,11 @@
             // 
             // toolStripLabel8
             // 
+            this.toolStripLabel8.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.toolStripLabel8.Name = "toolStripLabel8";
             this.toolStripLabel8.Size = new System.Drawing.Size(90, 30);
             this.toolStripLabel8.Text = "MrNiato";
+            this.toolStripLabel8.Click += new System.EventHandler(this.toolStripLabel8_Click);
             // 
             // tabControl1
             // 
@@ -611,12 +613,12 @@
             // 
             // godmode
             // 
-            this.godmode.Interval = 700;
+            this.godmode.Interval = 1000;
             this.godmode.Tick += new System.EventHandler(this.godmode_Tick);
             // 
             // ammo
             // 
-            this.ammo.Interval = 700;
+            this.ammo.Interval = 1000;
             this.ammo.Tick += new System.EventHandler(this.ammo_Tick);
             // 
             // Form1
