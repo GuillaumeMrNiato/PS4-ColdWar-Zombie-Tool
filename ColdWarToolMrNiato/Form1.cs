@@ -533,7 +533,6 @@ namespace ColdWarToolMrNiato
         {
             PS4.Notify(222, "PS4 will disconnect...");
             PS4.Disconnect();
-
             MessageBox.Show("PS4 Disconnected !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -550,6 +549,7 @@ namespace ColdWarToolMrNiato
 
         private void toolStripLabel8_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Update v1.0", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
